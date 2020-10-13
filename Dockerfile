@@ -1,6 +1,10 @@
 FROM node:12.16.3-stretch
 LABEL maintainer="oguz@ciloglu.us"
 
+RUN npm install prerender
+
+RUN npm install prerender-memory-cache
+
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
   && sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' \
   && apt-get update -y \
