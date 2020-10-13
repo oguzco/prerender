@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 var prerender = require('./lib');
 
-const prerender = require('prerender'); //const server = prerender();
+const prerender2 = require('prerender'); //const server = prerender();
 
-var server = prerender({
+var server = prerender2({
         chromeFlags: ['--no-sandbox', '--headless', '--disable-gpu','--remote-debugging-port=9222', '--hide-scrollbars'],
         pageDoneCheckInterval: 50,
         blacklistedDomains: ['embed.tawk.to','cdn.jsdelivr.net','static-v.tawk.to','va.tawk.to','portalv3.s3.eu-central-1.amazonaws.com','www.googletagmanager.com','fonts.googleapis.com'],
